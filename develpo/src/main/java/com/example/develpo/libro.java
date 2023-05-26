@@ -1,23 +1,55 @@
 package com.example.develpo;
 
+
 import jakarta.persistence.*;
 
-
+@Entity
+@Table(name = "libro_carlosDs")
 public class libro {
 
-    @Column
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String titulo;
-    @Column
     private String referencia;
-    @Column
     private String autor;
-    @Column
     private double precio;
-    @Column
     private String ubicacion;
 
     public libro() {
     }
+    
+    public String getTitulo() {
+        return titulo;
+    }
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+    public String getReferencia() {
+        return referencia;
+    }
+    public void setReferencia(String referencia) {
+        this.referencia = referencia;
+    }
+    public String getAutor() {
+        return autor;
+    }
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+    public double getPrecio() {
+        return precio;
+    }
+    public void setPrecio(long precio) {
+        this.precio = precio;
+    }
+    public String getUbicacion() {
+        return ubicacion;
+    }
+    public void setUbicacion(String ubicacion) {
+        this.ubicacion = ubicacion;
+    }
+
+    
 
     
 }
